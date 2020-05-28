@@ -50,14 +50,14 @@
   background-color: red;
   border: none;
 }
-.blue{
+.orange{
   padding: 5px;
-  background-color: blue;
+  background-color: #FE6702;
   border: none;
 }
-.green{
+.yellow{
   padding: 5px;
-  background-color: green;
+  background-color: #FFCA04;
   border: none;
 }
 .black{
@@ -73,11 +73,11 @@
   display:flex;
   flex-direction:column;
 }
-.greenout{
-  border: 2px solid green
+.yellowout{
+  border: 2px solid #FFCA04
 }
-.blueout{
-  border: 2px solid blue
+.orangeout{
+  border: 2px solid #FE6702
 }
 .redout{
   border: 2px solid red
@@ -104,20 +104,10 @@
   align-items: center;
 }
 
-.editbutton{
-  width: 120px;
-  /* background-color: slategrey; */
-  /* border: 5px solid lightgrey; */
-  /* color: ivory; */
-  outline: none;
-}
-
 .presets{
   display:flex;
-  width: 380px;
   justify-content: space-between;
   margin-top: 30px;
-  height: 80px;
 }
 
 /* font-family: 'Press Start 2P', cursive; */

@@ -141,8 +141,8 @@ function App() {
   const [speed, setSpeed] = useState(100)
   const [red, setRed] = useState(false)
   const [black, setBlack] = useState(true)
-  const [blue, setBlue] = useState(false)
-  const [green, setGreen] = useState(false)
+  const [orange, setOrange] = useState(false)
+  const [yellow, setYellow] = useState(false)
   const [color, setColor] = useState('black')
   const [running, setRunning] = useState(false)
 
@@ -151,12 +151,12 @@ function App() {
       setColor('red')
     } else if(black === true) {
       setColor('black')
-    } else if(blue === true) {
-      setColor('blue')
-    } else if(green === true) {
-      setColor('green')
+    } else if(orange === true) {
+      setColor('orange')
+    } else if(yellow === true) {
+      setColor('yellow')
     }
-  }, [red, black, blue, green])
+  }, [red, black, orange, yellow])
 
   useEffect(() => {
     if(fast === true){
@@ -172,28 +172,28 @@ function App() {
   runningRef.current = running
 
   const changeRed = () => {
-    setGreen(false)
-    setBlue(false)
+    setYellow(false)
+    setOrange (false)
     setBlack(false)
     setRed(true)
   }
   const changeBlack = () => {
-    setGreen(false)
-    setBlue(false)
+    setYellow(false)
+    setOrange(false)
     setRed(false)
     setBlack(true)
   }
-  const changeBlue = () => {
-    setGreen(false)
+  const changeOrange = () => {
+    setYellow(false)
     setRed(false)
     setBlack(false)
-    setBlue(true)
+    setOrange(true)
   }
-  const changeGreen = () => {
-    setBlue(false)
+  const changeYellow = () => {
+    setOrange(false)
     setRed(false)
     setBlack(false)
-    setGreen(true)
+    setYellow(true)
   }
 
   const changeFast = () => {
@@ -357,8 +357,8 @@ function App() {
               <button className={black ? 'black colorbut' : 'colorbut'} onClick={() => changeBlack()}/>
             </div>
             <div className='flexes'>
-              <button className={blue ? 'blue colorbut': 'colorbut blueout'} onClick={() => changeBlue()}/>
-              <button className={green ? 'green colorbut' : 'colorbut greenout'} onClick={() => changeGreen()}/>
+              <button className={orange ? 'orange colorbut': 'colorbut orangeout'} onClick={() => changeOrange()}/>
+              <button className={yellow ? 'yellow colorbut' : 'colorbut yellowout'} onClick={() => changeYellow()}/>
             </div>
           </div>
           <button className={fast ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeFast()}>fast</button>
