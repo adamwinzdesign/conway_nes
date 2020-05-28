@@ -246,7 +246,8 @@ function App() {
   return (
     <>
       <div className='main'>
-        <div className='buttons'>
+        <div className='buttons nes-container with-title'>
+          <p className='title'>Controls</p>
           <button
             className='nes-btn'
             onClick={() => {
@@ -315,9 +316,9 @@ function App() {
             )}
           </div>
           <div className='bottom'>
-            <div className='presets'>
+            <div className='presets nes-container with-title is-centered'>
+              <p className='title'>Presets</p>
               <button 
-              // className='preset'
               className='nes-btn'
               onClick={() => {
                 setRows(30)
@@ -350,7 +351,8 @@ function App() {
             </div>
           </div>
         </div>
-        <div className='colors'>
+        <div className='colors nes-container with-title'>
+          <p className='title'>Preferences</p>
           <div className='columns'>
             <div className='flexes'>
               <button className={red ? 'red colorbut': 'colorbut redout'} onClick={() => changeRed()}/>
