@@ -6,31 +6,19 @@
   width: 15px;
   height: 15px;
   border: solid 1px black;
+  margin-bottom: 3px;
 }
 .main{
   display: flex;
   justify-content: center;
   align-items:center;
-  /* background-color:gainsboro; */
-  /* padding-bottom: 20%; */
 }
 .buttons{
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
-  /* margin-right:25px; */
-  /* padding:1%; */
-}
-
-.button{
-  margin: 5px;
-  padding: 5px;
-  width: 80px;
-  outline: none;
-  /* border:4px solid ivory; */
-  /* color: whitesmoke; */
-  font-weight:bold;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .header{
@@ -38,11 +26,7 @@
   flex-direction:column;
   justify-content: center;
   align-items:center;
-  /* color:slategrey; */
-  font-weight: bold;
-  /* width: 65%; */
-  /* border: 30px solid ivory; */
-  /* background-color: lightgoldenrodyellow; */
+  font-family: 'Press Start 2P', cursive;
   margin-top: 5%;
   padding:2.5%;
 }
@@ -102,17 +86,15 @@
 .speed{
   outline: none;
   margin: 10px;
-  width: 70px;
+  width: 10rem;
   height: 35px;
-  /* background: slategrey; */
-  color: whitesmoke;
-  /* border:none; */
-  font-weight:bold;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .current{
-  background-color: ivory;
-  color: slategrey;
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .bottom{
@@ -122,18 +104,10 @@
   align-items: center;
 }
 
-.editgrid{
-  display:flex;
-  width: 300px;
-  justify-content: space-between;
-  margin-top: 30px;
-  height: 50px;
-}
 .editbutton{
   width: 120px;
   /* background-color: slategrey; */
   /* border: 5px solid lightgrey; */
-  font-weight: bold;
   /* color: ivory; */
   outline: none;
 }
@@ -146,11 +120,4 @@
   height: 80px;
 }
 
-.preset{
-  width: 80px;
-  /* background-color: slategrey; */
-  /* border: 5px solid lightgrey; */
-  font-weight: bold;
-  color: ivory;
-  outline: none;
-}
+/* font-family: 'Press Start 2P', cursive; */

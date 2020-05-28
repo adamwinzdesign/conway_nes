@@ -211,7 +211,6 @@ function App() {
     setMed(false)
     setSlow(true)
   }
-  // console.log(speed)
 
   const runSimulation = useCallback(() => {
     if (!runningRef.current){
@@ -249,7 +248,7 @@ function App() {
       <div className='main'>
         <div className='buttons'>
           <button
-            className='button'
+            className='nes-btn'
             onClick={() => {
               setRunning(!running)
               if(!running){
@@ -258,10 +257,10 @@ function App() {
               }
             }}
           >
-            {running ? 'stop' : 'start'}
+            {running ? 'Stop' : 'Start'}
           </button>
           <button 
-            className='button'
+            className='nes-btn'
             onClick={() => {
               if(running){
                 setRunning(!running)
@@ -269,22 +268,22 @@ function App() {
               setGrid(generateEmptyGrid(numCol, numRow))
             }}
           >
-            clear
+            Clear
           </button>
           <button 
-            className='button'
+            className='nes-btn'
             onClick={() => {
               if(running){
                 setRunning(!running)
               }
               const rows = []
               for(let i=0; i < numRow; i++){
-                rows.push(Array.from(Array(numCol), () => Math.random() > .75 ? 1 : 0))
+                rows.push(Array.from(Array(numCol), () => Math.random() > .7 ? 1 : 0))
               }  
               setGrid(rows)
             }}
           >
-            random
+            Random
           </button>
         </div>
         <div className='header'>
@@ -316,39 +315,10 @@ function App() {
             )}
           </div>
           <div className='bottom'>
-            <div className='editgrid'>
-              <button 
-              className='editbutton'
-              onClick={() => {
-                if(!running){
-                  setRows(numRow-1) 
-                  const rows = []
-                  for(let i=0; i < numRow; i++){
-                    rows.push(Array.from(Array(numCol), () => 0))
-                  }  
-                  setGrid(generateEmptyGrid(numCol, numRow))
-                }}}
-              >
-                remove row
-              </button>
-              <button 
-              className='editbutton'
-              onClick={() => {
-                if(!running){
-                  setRows(numRow+1) 
-                  const rows = []
-                  for(let i=0; i < numRow; i++){
-                    rows.push(Array.from(Array(numCol), () => 0))
-                  }  
-                  setGrid(generateEmptyGrid(numCol, numRow))
-                }}}
-              >
-                add row
-              </button>
-            </div>
             <div className='presets'>
               <button 
-              className='preset'
+              // className='preset'
+              className='nes-btn'
               onClick={() => {
                 setRows(30)
                 setCols(30)
@@ -358,7 +328,7 @@ function App() {
                 Preset One
               </button>
               <button 
-              className='preset'
+              className='nes-btn'
               onClick={() => {
                 setRows(30)
                 setCols(30)
@@ -368,7 +338,7 @@ function App() {
                 Preset Two
               </button>
               <button 
-              className='preset'
+              className='nes-btn'
               onClick={() => {
                 setRows(30)
                 setCols(30)
@@ -391,9 +361,9 @@ function App() {
               <button className={green ? 'green colorbut' : 'colorbut greenout'} onClick={() => changeGreen()}/>
             </div>
           </div>
-          <button className={fast ? 'current speed' : 'speed'} onClick={() => changeFast()}>fast</button>
-          <button className={med ? 'current speed' : 'speed'} onClick={() => changeMed()}>medium</button>
-          <button className={slow ? 'current speed' : 'speed'} onClick={() => changeSlow()}>slow</button>
+          <button className={fast ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeFast()}>fast</button>
+          <button className={med ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeMed()}>medium</button>
+          <button className={slow ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeSlow()}>slow</button>
         </div>
       </div>
     </>
