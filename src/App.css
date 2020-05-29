@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 .squares{
   width: 15px;
   height: 15px;
@@ -50,21 +54,41 @@
   background-color: red;
   border: none;
 }
+
+.red:focus{
+  outline:none;
+}
+
 .orange{
   padding: 5px;
   background-color: #FE6702;
   border: none;
 }
+
+.orange:focus{
+  outline:none;
+}
+
 .yellow{
   padding: 5px;
   background-color: #FFCA04;
   border: none;
 }
+
+.yellow:focus{
+  outline:none;
+}
+
 .black{
   padding: 5px;
   background-color: black;
   border: none;
 }
+
+.black:focus{
+  outline:none;
+}
+
 .flexes{
   display: flex;
 
@@ -115,4 +139,6 @@
   font-family: 'Press Start 2P', cursive;
 }
 
-/* font-family: 'Press Start 2P', cursive; */
+li{
+  font-family: 'Press Start 2P', cursive;
+}

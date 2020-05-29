@@ -284,11 +284,12 @@ function App() {
               setGrid(rows)
             }}
           >
-            Random
+            Randomize
           </button>
         </div>
         <div className='header'>
           <h1>Conway's Game of Life!</h1>
+
           <div style={{
             display: 'grid',
             gridTemplateColumns: `repeat(${numCol}, 20px)`
@@ -367,6 +368,20 @@ function App() {
           <button className={med ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeMed()}>medium</button>
           <button className={slow ? 'current speed nes-btn' : 'speed nes-btn'} onClick={() => changeSlow()}>slow</button>
         </div>
+
+        <div className='nes-container with-title'>
+            <p className='title'>Rules</p>
+            <div className="lists">
+              <ul className="nes-list is-disc">
+                <li>Each cell will live or die at the next generation depending on how many neighbors it has currently.</li>
+                <li>Cells with 2 or fewer neighbors will die.</li>
+                <li>Cells with 3 neighbors will live into the next generation.</li>
+                <li>Cells with 4 or more neighbors will die.</li>
+                <li>The process will repeat until you click stop!</li>
+              </ul>
+            </div>
+          </div>
+
       </div>
     </>
   )
