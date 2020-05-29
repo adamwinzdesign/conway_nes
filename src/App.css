@@ -23,6 +23,7 @@ h1 {
   justify-content: center;
   align-items:center;
   font-family: 'Press Start 2P', cursive;
+  font-size: .75rem;
 }
 
 .header{
@@ -31,6 +32,11 @@ h1 {
   justify-content: center;
   align-items:center;
   font-family: 'Press Start 2P', cursive;
+}
+
+.presets {
+  font-family: 'Press Start 2P', cursive;
+  font-size: .75rem;
 }
 
 .colorbut{
@@ -111,6 +117,7 @@ h1 {
   width: 10rem;
   height: 35px;
   font-family: 'Press Start 2P', cursive;
+  font-size: .75rem;
 }
 
 .current{
@@ -122,19 +129,17 @@ h1 {
 .extras{
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
-  /* align-items: center;  */
 }
 
 .presets{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 30px;
 }
 
 .title, .generation{
   font-family: 'Press Start 2P', cursive;
+  font-size: .75rem;
 }
 
 .generationcontain {
